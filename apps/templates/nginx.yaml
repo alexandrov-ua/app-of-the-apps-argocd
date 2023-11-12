@@ -27,4 +27,4 @@ spec:
           tag: 1.25.3
         configuration:
         - name: NGINX_PORT
-          value: "8080"
+          value: "80"
