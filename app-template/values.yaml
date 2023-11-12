@@ -1,0 +1,10 @@
+replicaCount: 1
+name: my-app
+image:
+  name: nginx
+  tag: latest
+configuration:
+  - name: Qwe
+    value: Asd
+#  - name: NGINX_PORT
+#    value: "80"

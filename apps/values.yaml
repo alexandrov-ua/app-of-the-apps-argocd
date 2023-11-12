@@ -1,0 +1,6 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/alexandrov-ua/app-of-the-apps-argocd
+    targetRevision: HEAD

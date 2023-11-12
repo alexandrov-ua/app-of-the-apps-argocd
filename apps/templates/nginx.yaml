@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: default
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: helm-guestbook
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+    valuesObject:
+      replicaCount: 2
+      name: my-nginx-app
+      image:
+        name: nginx
+        tag: 1.25.3
+      configuration:
+      - name: NGINX_PORT
+        value: "80"
