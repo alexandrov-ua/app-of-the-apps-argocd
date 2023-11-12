@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: insgress-test.com
+  - host: "insgress-test.com"
     http:
       paths:
       - path: /{{ .Values.name }}/
