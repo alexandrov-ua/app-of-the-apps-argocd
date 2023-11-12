@@ -4,14 +4,12 @@ metadata:
   name: {{ .Values.name }}-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx-example
   rules:
   - host: eirhgjhergj.com
     http:
       paths:
-        path: /{{ .Values.name }}
+      - path: /{{ .Values.name }}
         pathType: Prefix  
         backend:
           service:
