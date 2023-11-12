@@ -11,7 +11,7 @@ spec:
   - host: local-ingress.com
     http:
       paths:
-      - path: \/{{ .Values.name }}(\/?)(.*)
+      - path: /{{ .Values.name }}(\/?)(.*)
         pathType: ImplementationSpecific  
         backend:
           service:
