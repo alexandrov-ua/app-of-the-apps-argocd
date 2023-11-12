@@ -14,12 +14,13 @@ spec:
     path: app-template
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
-    valuesObject:
-      replicaCount: 2
-      name: my-nginx-app
-      image:
-        name: nginx
-        tag: 1.25.3
-      configuration:
-      - name: NGINX_PORT
-        value: "80"
+    helm:
+      valuesObject:
+        replicaCount: 2
+        name: my-nginx-app
+        image:
+          name: nginx
+          tag: 1.25.3
+        configuration:
+        - name: NGINX_PORT
+          value: "80"

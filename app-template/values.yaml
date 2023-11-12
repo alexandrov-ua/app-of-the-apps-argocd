@@ -6,5 +6,3 @@ image:
 configuration:
   - name: Qwe
     value: Asd
-#  - name: NGINX_PORT
-#    value: "80"
