@@ -8,9 +8,9 @@ metadata:
 spec:
   ingressClassName: nginx-example
   rules:
-  - http:
+  - host: eirhgjhergj.com
+    http:
       paths:
-      - host: eirhgjhergj.com
         path: /{{ .Values.name }}
         pathType: Prefix  
         backend:
