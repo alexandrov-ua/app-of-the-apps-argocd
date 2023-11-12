@@ -9,7 +9,7 @@ spec:
   - host: "insgress-test.com"
     http:
       paths:
-      - path: /{{ .Values.name }}
+      - path: /
         pathType: Prefix  
         backend:
           service:
