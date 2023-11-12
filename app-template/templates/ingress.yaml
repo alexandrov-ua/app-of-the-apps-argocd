@@ -10,7 +10,8 @@ spec:
   rules:
   - http:
       paths:
-      - path: /{{ .Values.name }}
+      - hpst: eirhgjhergj.com
+        path: /{{ .Values.name }}
         pathType: Prefix  
         backend:
           service:
