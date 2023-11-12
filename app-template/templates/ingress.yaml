@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - hpst: eirhgjhergj.com
+      - host: eirhgjhergj.com
         path: /{{ .Values.name }}
         pathType: Prefix  
         backend:
