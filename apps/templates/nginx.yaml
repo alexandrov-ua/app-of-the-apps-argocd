@@ -9,6 +9,10 @@ spec:
   destination:
     namespace: default
     server: {{ .Values.spec.destination.server }}
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
   project: default
   source:
     path: app-template
